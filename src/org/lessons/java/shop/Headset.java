@@ -39,7 +39,7 @@ public class Headset extends Product{
 
     @Override
     public String getProductInfo() {
-        return super.getProductInfo() + '\n' +
+        return super.getProductInfo() +
                 "Colore: " + getColor() + '\n' +
                 "Tipo: " + getType();
     }

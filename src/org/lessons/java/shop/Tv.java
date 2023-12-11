@@ -31,7 +31,7 @@ public class Tv extends Product{
 
     @Override
     public String getProductInfo() {
-        return super.getProductInfo() + '\n' +
+        return super.getProductInfo() +
                 "Dimensioni: " + inches + " pollici" +  '\n' +
                 "Smart: " + smart;
 

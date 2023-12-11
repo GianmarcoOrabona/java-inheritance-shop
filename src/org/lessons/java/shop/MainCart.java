@@ -85,9 +85,9 @@ public class MainCart {
                 String wirelessCable = scanner.nextLine();
 
                 if (wirelessCable.equalsIgnoreCase("wireless")) {
-                    wirelessCable = "bluetooth";
+                    wirelessCable = "wireless";
                 } else {
-                    wirelessCable = "cablate";
+                    wirelessCable = "cavo";
                 }
 
                 Headset headset = new Headset(headsetName, headsetDescription, headsetPrice, headsetVat, color, wirelessCable);

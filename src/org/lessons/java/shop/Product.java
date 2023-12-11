@@ -38,7 +38,7 @@ public class Product {
     }
 
     public void setName(String name) throws IllegalArgumentException{
-        validateName(name); // prima testo il valore che viene da fuori: se non valido si interrompe con eccezione
+        validateName(name);
         this.name = name;
     }
 

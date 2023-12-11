@@ -41,7 +41,7 @@ public class Smartphone extends Product{
 
     @Override
     public String getProductInfo() {
-        return super.getProductInfo() + '\n' +
+        return super.getProductInfo() +
                 "Imei: " + getImei() + '\n' +
                 "Memoria: " + getStorage() + "Gb";
     }
