@@ -43,4 +43,6 @@ public class Headset extends Product{
                 "Colore: " + getColor() + '\n' +
                 "Tipo: " + getType();
     }
+
+
 }

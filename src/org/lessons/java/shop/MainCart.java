@@ -1,14 +1,12 @@
 package org.lessons.java.shop;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainCart {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList products = new ArrayList<>();
 
         System.out.println("Quale prodotto vuoi inserire? Tv/Smartphone/Cuffie: ");
         String product = scanner.nextLine().toLowerCase();
