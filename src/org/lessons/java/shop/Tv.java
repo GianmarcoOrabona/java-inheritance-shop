@@ -5,10 +5,36 @@ import java.math.BigDecimal;
 public class Tv extends Product{
     // ATTRIBUTI
 
-    private boolean smart;
+    private int inches;
+    private String smart;
 
-    public Tv(String name, String description, BigDecimal price, BigDecimal vat, boolean smart) throws IllegalArgumentException {
+    // COSTRUTTORI
+
+    public Tv(String name, String description, BigDecimal price, BigDecimal vat, int inches, String smart) throws IllegalArgumentException {
         super(name, description, price, vat);
+        this.inches = inches;
         this.smart = smart;
+    }
+
+    // GETTER E SETTER
+
+    public String isSmart() {
+        return smart;
+    }
+
+    public void setSmart(String smart) {
+        this.smart = smart;
+    }
+
+
+    // METODI
+
+    @Override
+    public String getProductInfo() {
+        return super.getProductInfo() + '\n' +
+                "Dimensioni: " + inches + " pollici" +  '\n' +
+                "Smart: " + smart;
+
+
     }
 }

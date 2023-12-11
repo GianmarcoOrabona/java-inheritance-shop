@@ -12,8 +12,6 @@ public class Product {
     private BigDecimal price;
     private BigDecimal vat;
 
-    // Categoria
-    private Category category;
 
     // COSTRUTTORI
 
@@ -30,15 +28,6 @@ public class Product {
 
 
     // GETTER E SETTER
-
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 
     public int getCode() {
         return code;
@@ -109,12 +98,7 @@ public class Product {
                 "Description: " + getDescription() + '\n' +
                 "Price without VAT: " + getPrice() + " €" + '\n' +
                 "Price + VAT: " + getVatPrice() + " €" + '\n' +
-                "Product Code: " + getCode() + '\n' +
-
-                " " + '\n' +
-                "<-----Category----->" + '\n' +
-                "Category name: " + category.getName() + '\n' +
-                "Category description: " + category.getDescription();
+                "Product Code: " + getCode() + '\n';
     }
 
     // metodi di validazione

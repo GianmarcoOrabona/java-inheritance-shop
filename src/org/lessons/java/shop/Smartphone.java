@@ -1,6 +1,7 @@
 package org.lessons.java.shop;
 
 import java.math.BigDecimal;
+import java.util.Random;
 
 public class Smartphone extends Product{
 
@@ -9,9 +10,44 @@ public class Smartphone extends Product{
     private int imei;
     private int storage;
 
-    public Smartphone(String name, String description, BigDecimal price, BigDecimal vat, int imei, int storage) throws IllegalArgumentException {
+    // COSTRUTTORI
+
+    public Smartphone(String name, String description, BigDecimal price, BigDecimal vat, int storage) throws IllegalArgumentException {
         super(name, description, price, vat);
-        this.imei = imei;
+        this.imei = createImeiCode();
         this.storage = storage;
+    }
+
+    // GETTER E SETTER
+
+    public int getImei() {
+        return imei;
+    }
+
+    public void setImei(int imei) {
+        this.imei = imei;
+    }
+
+    public int getStorage() {
+        return storage;
+    }
+
+    public void setStorage(int storage) {
+        this.storage = storage;
+    }
+
+
+    // METODI
+
+    @Override
+    public String getProductInfo() {
+        return super.getProductInfo() + '\n' +
+                "Imei: " + getImei() + '\n' +
+                "Memoria: " + getStorage() + "Gb";
+    }
+
+    private int createImeiCode(){
+        Random random= new Random();
+        return random.nextInt(1000, Integer.MAX_VALUE);
     }
 }
