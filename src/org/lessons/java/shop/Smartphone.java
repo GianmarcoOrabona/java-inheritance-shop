@@ -39,6 +39,7 @@ public class Smartphone extends Product{
 
     // METODI
 
+    // Faccio un override del metodo della superclasse
     @Override
     public String getProductInfo() {
         return super.getProductInfo() +

@@ -6,11 +6,11 @@ public class Tv extends Product{
     // ATTRIBUTI
 
     private int inches;
-    private String smart;
+    private boolean smart;
 
     // COSTRUTTORI
 
-    public Tv(String name, String description, BigDecimal price, BigDecimal vat, int inches, String smart) throws IllegalArgumentException {
+    public Tv(String name, String description, BigDecimal price, BigDecimal vat, int inches, boolean smart) throws IllegalArgumentException {
         super(name, description, price, vat);
         this.inches = inches;
         this.smart = smart;
@@ -18,19 +18,21 @@ public class Tv extends Product{
 
     // GETTER E SETTER
 
-    public String isSmart() {
+    public boolean getSmart() {
         return smart;
     }
 
-    public void setSmart(String smart) {
+    public void setSmart(boolean smart) {
         this.smart = smart;
     }
 
 
     // METODI
 
+    // Faccio un override del metodo della superclasse
     @Override
     public String getProductInfo() {
+        String isSmart = smart ? "si" : "no";
         return super.getProductInfo() +
                 "Dimensioni: " + inches + " pollici" +  '\n' +
                 "Smart: " + smart;

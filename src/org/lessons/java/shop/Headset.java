@@ -7,11 +7,11 @@ public class Headset extends Product{
     // ATTRIBUTI
 
     private String color;
-    private String type;
+    private boolean type;
 
     // COSTRUTTORI
 
-    public Headset(String name, String description, BigDecimal price, BigDecimal vat, String color,String type) throws IllegalArgumentException {
+    public Headset(String name, String description, BigDecimal price, BigDecimal vat, String color,boolean type) throws IllegalArgumentException {
         super(name, description, price, vat);
         this.color = color;
         this.type = type;
@@ -19,11 +19,11 @@ public class Headset extends Product{
 
     // GETTER E SETTER
 
-    public String getType() {
+    public boolean getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(boolean type) {
         this.type = type;
     }
 
@@ -37,8 +37,10 @@ public class Headset extends Product{
 
     // METODI
 
+    // Faccio un override del metodo della superclasse
     @Override
     public String getProductInfo() {
+        String isWireless = type ? "bluetooth" : "cavo";
         return super.getProductInfo() +
                 "Colore: " + getColor() + '\n' +
                 "Tipo: " + getType();

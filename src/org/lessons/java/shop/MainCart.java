@@ -12,8 +12,9 @@ public class MainCart {
         String product = scanner.nextLine().toLowerCase();
 
         switch (product) {
-            case "tv":
 
+            // Caso in cui l'utente sceglie il televisore
+            case "tv":
                 System.out.println("Nome tv: ");
                 String tvName = scanner.nextLine();
 
@@ -29,20 +30,18 @@ public class MainCart {
                 System.out.println("Iva");
                 BigDecimal tvVat = BigDecimal.valueOf(Double.parseDouble(scanner.nextLine()));
 
+                // Nuovi dati che vanno aggiunti alla creazione dell'oggetto
                 System.out.println("Smart tv?: ");
-                String tvSmart = scanner.nextLine();
+                String isSmart = scanner.nextLine();
 
-                if (tvSmart.equalsIgnoreCase("si")) {
-                    tvSmart = "si";
-                } else {
-                    tvSmart = "no";
-                }
+                boolean smart = isSmart.equals("si");
 
-                Tv tv = new Tv(tvName, tvDescription, tvPrice, tvVat, tvInches, tvSmart);
+                Tv tv = new Tv(tvName, tvDescription, tvPrice, tvVat, tvInches, smart);
                 System.out.println(tv.getProductInfo());
 
                 break;
 
+            // Caso in cui l'utente sceglie lo smartphone
             case "smartphone":
                 System.out.println("Nome smartphone: ");
                 String smartphoneName = scanner.nextLine();
@@ -56,6 +55,7 @@ public class MainCart {
                 System.out.println("Iva");
                 BigDecimal smartphoneVat = BigDecimal.valueOf(Double.parseDouble(scanner.nextLine()));
 
+                // Nuovi dati che vanno aggiunti alla creazione dell'oggetto
                 System.out.println("Memoria smartphone (Gb)");
                 int storage = Integer.parseInt(scanner.nextLine());
 
@@ -65,6 +65,7 @@ public class MainCart {
 
                 break;
 
+            // Caso in cui l'utente sceglie le cuffie
             case "cuffie":
                 System.out.println("Nome cuffie: ");
                 String headsetName = scanner.nextLine();
@@ -78,19 +79,16 @@ public class MainCart {
                 System.out.println("Iva");
                 BigDecimal headsetVat = BigDecimal.valueOf(Double.parseDouble(scanner.nextLine()));
 
+                // Nuovi dati che vanno aggiunti alla creazione dell'oggetto
                 System.out.println("Colore cuffie: ");
                 String color = scanner.nextLine();
 
                 System.out.println("Wireless o con cavo?: ");
-                String wirelessCable = scanner.nextLine();
+                String isWireless = scanner.nextLine();
 
-                if (wirelessCable.equalsIgnoreCase("wireless")) {
-                    wirelessCable = "wireless";
-                } else {
-                    wirelessCable = "cavo";
-                }
+                boolean wireless = isWireless.equals("si");
 
-                Headset headset = new Headset(headsetName, headsetDescription, headsetPrice, headsetVat, color, wirelessCable);
+                Headset headset = new Headset(headsetName, headsetDescription, headsetPrice, headsetVat, color, wireless);
                 System.out.println(headset.getProductInfo());
 
                 break;
